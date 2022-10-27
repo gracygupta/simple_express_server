@@ -1,0 +1,11 @@
+{
+  "name": "session",
+  "version": "1.0.0",
+  "description": "This is a simple express server for demostration purposes",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Gracy",
+  "license": "ISC"
+}
