@@ -29,6 +29,16 @@ app.get("/calculate/:operation", function (req, res) {
     const num2 = Number(req.query.num2);
     const result = num1 - num2;
     res.send(result + "");
+  } else if (opr == "mul") {
+    const num1 = Number(req.query.num1);
+    const num2 = Number(req.query.num2);
+    const result = num1 * num2;
+    res.send(result + "");
+  } else if (opr == "div") {
+    const num1 = Number(req.query.num1);
+    const num2 = Number(req.query.num2);
+    const result = num1 / num2;
+    res.send(result + "");
   } else {
     res.send("Operation not found...");
   }
