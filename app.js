@@ -5,7 +5,15 @@ const app = express();
 app.get("/", function (req, res) {
   var name = req.query.name;
   var movie = req.query.movie;
-  res.send("my name is ${name}, fav movie is ${movie}");
+
+  var result = "";
+  try {
+    name = name.toUpperCase();
+    result = "my name is " + name + ", fav movie is " + movie;
+  } catch (error) {
+    result = "name required";
+  }
+  res.send(result);
 });
 
 //demonstration of param
@@ -43,6 +51,7 @@ app.get("/calculate/:operation", function (req, res) {
     res.send("Operation not found...");
   }
 });
+
 app.listen(8000, function () {
   console.log("Server is up.");
 });
